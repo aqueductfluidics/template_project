@@ -6,7 +6,7 @@ from types import ModuleType
 from typing import Union
 
 from .recordable import Recordable
-from .setpoint import Setpoint
+from .setpoint import Setpoint, ALLOWED_DTYPES
 from .user_prompt import Prompt
 from .user_input import Input, UserInputTypes
 
