@@ -30,6 +30,8 @@ All notable changes to the template API are documented here.
   Added 'clear_recorded' class method.
 - [devices/aqueduct/scip/obj.py]
   Added 'clear_recorded' class method.
+- [devices/aqueduct/syrp/obj.py]
+  Added 'clear_recorded' class method.
 - [devices/aqueduct/trcx/obj.py]
   Added 'clear_recorded' class method.
  
