@@ -70,6 +70,28 @@ class OHSA(devices.base.obj.Device):
         """
         return {}
 
+    def clear_recorded(self):
+        """Clear the recorded data for the OHSA device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          weight
+        ====================
+
+        for each input.
+
+        :Example: clear the recorded data for the OHSA device names OHSASIM:
+
+        .. code-block:: python
+
+            OHSASIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        return {}
+
     def tare(self, index: int = 0):
         """Send a tare command to one of the four balance inputs.
 

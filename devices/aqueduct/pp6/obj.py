@@ -241,6 +241,29 @@ class PP6(devices.base.obj.Device):
         """
         return {}
 
+    def clear_recorded(self):
+        """Clear the recorded data for the PP6 device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          steps_done
+          rpm
+        ====================
+
+        for each input.
+
+        :Example: clear the recorded data for the PP6 device names PP6SIM:
+
+        .. code-block:: python
+
+            PP6SIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        return {}
+
     @staticmethod
     def make_command(
             mode: Union[int, str] = None,

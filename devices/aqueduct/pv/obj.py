@@ -44,15 +44,8 @@ class PV(devices.base.obj.Device):
         """
         return None
 
-    def set_position(self, pct_open: float = 1.) -> None:
+    def set_position(self, pct_open: float = 1., record: bool = False):
         """Set the position of the pinch valve.
-
-        :param pct_open:
-            | A float-like value.
-            | Range must be between 0. and 1.
-            | `pct_open` = 1. sets the valve fully open,
-            | `pct_open` = 0. sets the valve fully closed.
-        :type pct_open: float,  [0., 1.]
 
         :Example:
 
@@ -60,10 +53,42 @@ class PV(devices.base.obj.Device):
 
             PVSIM.set_position(0.70)
 
+        :param pct_open:
+            | A float-like value.
+            | Range must be between 0. and 1.
+            | `pct_open` = 1. sets the valve fully open,
+            | `pct_open` = 0. sets the valve fully closed.
+        :type pct_open: float,  [0., 1.]
+        :param record:
+            | record the operational data of the pump
+            | Defaults to False
+        :type record: bool
         :return: None
         :rtype: None
         """
-        return None
+        return {}
+
+    def clear_recorded(self):
+        """Clear the recorded data for the PV device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          pct_open
+        ====================
+
+        for each input.
+
+        :Example: clear the recorded data for the PV device names PVSIM:
+
+        .. code-block:: python
+
+            PVSIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        return {}
 
     def position(self) -> float:
         """Get the position of the pinch valve.

@@ -211,6 +211,118 @@ class PP12(devices.base.obj.Device):
         """
         return {}
 
+    def stop(
+            self,
+            pump0: Union[int, str, bool, None] = None,
+            pump1: Union[int, str, bool, None] = None,
+            pump2: Union[int, str, bool, None] = None,
+            pump3: Union[int, str, bool, None] = None,
+            pump4: Union[int, str, bool, None] = None,
+            pump5: Union[int, str, bool, None] = None,
+            pump6: Union[int, str, bool, None] = None,
+            pump7: Union[int, str, bool, None] = None,
+            pump8: Union[int, str, bool, None] = None,
+            pump9: Union[int, str, bool, None] = None,
+            pump10: Union[int, str, bool, None] = None,
+            pump11: Union[int, str, bool, None] = None,
+    ):
+        """Command to stop one or more pumps.
+
+        For each of the 6 pump inputs, pass an :class:`int`, :class:`str`, :class:`bool` or None.
+
+        =================   ==========
+              param           action
+        =================   ==========
+                1              stop
+               "1"             stop
+              True             stop
+           all others          none
+        =================   ==========
+
+        :Example:
+
+        .. code-block:: python
+
+            # stop inputs 0 and 2
+
+            PP6SIM.stop(pump0=True, pump2=1)
+
+        :param pump0:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump0: int, str, bool, None, not required
+        :param pump1:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump1: int, str, bool, None, not required
+        :param pump2:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump2: int, str, bool, None, not required
+        :param pump3:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump3: int, str, bool, None, not required
+        :param pump4:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump4: int, str, bool, None, not required
+        :param pump5:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump5: int, str, bool, None, not required
+        :param pump6:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump6: int, str, bool, None, not required
+        :param pump7:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump7: int, str, bool, None, not required
+        :param pump8:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump8: int, str, bool, None, not required
+        :param pump9:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump9: int, str, bool, None, not required
+        :param pump10:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump10: int, str, bool, None, not required
+        :param pump11:
+            | int, str, bool, None
+            | Defaults to None
+        :type pump11: int, str, bool, None, not required
+        :return: tx_params
+        :rtype: dict
+        """
+        return {}
+
+    def clear_recorded(self):
+        """Clear the recorded data for the PP12 device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          steps_done
+          rpm
+        ====================
+
+        for each input.
+
+        :Example: clear the recorded data for the PP12 device names PP12SIM:
+
+        .. code-block:: python
+
+            PP12SIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        return {}
+
     @staticmethod
     def make_command(
             mode: Union[int, str] = None,

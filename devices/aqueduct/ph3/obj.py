@@ -60,6 +60,28 @@ class PH3(devices.base.obj.Device):
         """
         return {}
 
+    def clear_recorded(self):
+        """Clear the recorded data for the PH3 device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          pH
+        ====================
+
+        for each input.
+
+        :Example: clear the recorded data for the PH3 device names PH3SIM:
+
+        .. code-block:: python
+
+            PH3SIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        return {}
+
     def value(self, index: int = 0):
         """
         Get a pH value reading from one of the 3 possible pH probe inputs. The *input_num* argument

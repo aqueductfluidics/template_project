@@ -160,6 +160,27 @@ class MFPP(devices.base.obj.Device):
         """
         return {}
 
+    def clear_recorded(self):
+        """Clear the recorded data for the MFPP device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          ml_done
+          ml_min
+        ====================
+
+        :Example: clear the recorded data for the MFPP device names MFPPSIM:
+
+        .. code-block:: python
+
+            MFPPSIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        return {}
+
     def ml_pumped(self) -> float:
         """Get the volume of fluid displaced by the pump since it was started. The volume resets
         to `0` when a `start` command is issued but not when a `resume` command is issued.
