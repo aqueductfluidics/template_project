@@ -91,6 +91,28 @@ class EUST(devices.base.obj.Device):
         """
         return {}
 
+    def clear_recorded(self):
+        """Clear the recorded data for the EUST device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          rpm
+          torque
+          temperature
+        ====================
+
+        :Example: clear the recorded data for the EUST device names EUSTSIM:
+
+        .. code-block:: python
+
+            EUSTSIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        return {}
+
     def start_mixers(
             self,
             mixer0: Union[MixerCommand, None] = None,

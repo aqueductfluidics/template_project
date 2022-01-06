@@ -67,6 +67,28 @@ class PH(devices.base.obj.Device):
         devices.base.obj.enqueue_and_pause(vars(self), content)
         return content
 
+    def clear_recorded(self):
+        """Clear the recorded data for the PH device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          pH
+        ====================
+
+        for each input.
+
+        :Example: clear the recorded data for the PH device names PHSIM:
+
+        .. code-block:: python
+
+            PHSIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        return {}
+
     def get_ph(self):
         """
         Get a pH reading from the pH probe.

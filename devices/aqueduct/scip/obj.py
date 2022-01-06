@@ -61,6 +61,28 @@ class SCIP(devices.base.obj.Device):
         """
         return {}
 
+    def clear_recorded(self):
+        """Clear the recorded data for the SCIP device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          pressure
+        ====================
+
+        for each input.
+
+        :Example: clear the recorded data for the SCIP device names SCIPSIM:
+
+        .. code-block:: python
+
+            SCIPSIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        return {}
+
     def get_pressure(self, input_num: int = 0, txdcr_num: int = 0, units: str = "psi") -> Union[float, None]:
         """
         Get a pressure reading from one of the SciLog Device Node's 12 possible transducer inputs.

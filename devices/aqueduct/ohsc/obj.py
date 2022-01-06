@@ -65,6 +65,28 @@ class OHSC(devices.base.obj.Device):
         """
         return {}
 
+    def clear_recorded(self):
+        """Clear the recorded data for the OHSC device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          weight
+        ====================
+
+        for each input.
+
+        :Example: clear the recorded data for the OHSC device names OHSCSIM:
+
+        .. code-block:: python
+
+            OHSCSIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        return {}
+
     def weight(self, index: int = 1):
         """
         Get a weight reading from one of the 4 possible Ohaus Scout balance inputs. The *input_num* argument

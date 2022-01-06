@@ -145,6 +145,29 @@ class PP(devices.base.obj.Device):
         """
         return {}
 
+    def clear_recorded(self):
+        """Clear the recorded data for the PP device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          steps_done
+          rpm
+        ====================
+
+        for each input.
+
+        :Example: clear the recorded data for the PP device names PPSIM:
+
+        .. code-block:: python
+
+            PPSIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        return {}
+
     def ml_pumped(self, timestamp: bool = False) -> Union[float, tuple]:
         """Get the volume of fluid displaced by the pump since it was started. The volume resets
         to `0` when a `start` command is issued but not when a `resume` command is issued.

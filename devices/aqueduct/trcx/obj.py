@@ -617,6 +617,31 @@ class TRCX(devices.base.obj.Device):
         """
         return {}
 
+    def clear_recorded(self):
+        """Clear the recorded data for the TRCX device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          ul_min
+          ul_infused
+          ul_withdrawn
+          plgr_position
+        ====================
+
+        for each input.
+
+        :Example: clear the recorded data for the TRCX device names TRCXSIM:
+
+        .. code-block:: python
+
+            TRCXSIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        {}
+
     def vol_pumped(self, units: Union[int, str] = ML) -> tuple:
         """Get the volume of fluid displaced by the all of the pump inputs.
 

@@ -80,7 +80,8 @@ class SYRP(devices.base.obj.Device):
              pump2: Union[PumpCommand, None] = None,
              pump3: Union[PumpCommand, None] = None,
              wait_for_complete: bool = True,
-             update_interval_s: int = 1
+             update_interval_s: int = 1,
+             record: bool = True,
              ):
         """Command to start one or more pump inputs in either finite or continuous mode.
 
@@ -174,6 +175,10 @@ class SYRP(devices.base.obj.Device):
             | interval to update, should be greater than 0.5
             | Defaults to 1
         :type update_interval_s: PumpCommand, dict, None, required
+        :param record:
+            | record the operational data of the pump
+            | Defaults to False
+        :type record: bool
 
         :return: tx_params
         :rtype: dict
@@ -228,6 +233,28 @@ class SYRP(devices.base.obj.Device):
         :rtype: dict
         """
         return {}
+
+    def clear_recorded(self):
+        """Clear the recorded data for the SYRP device. The recordable data includes:
+
+        ====================
+          Recordable Data
+        ====================
+          pressure
+        ====================
+
+        for each input.
+
+        :Example: clear the recorded data for the SYRP device names SYRPSIM:
+
+        .. code-block:: python
+
+            SYRPSIM.clear_recorded()
+
+        :return: command dictionary
+        :rtype: dict
+        """
+        {}
 
     def vol_pumped(self, units: Union[int, str] = ML) -> tuple:
         """Get the volume of fluid displaced by the all of the pump inputs.
