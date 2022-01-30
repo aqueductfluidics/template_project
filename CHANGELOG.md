@@ -1,6 +1,21 @@
 # Change Log
 All notable changes to the template API are documented here.
 
+## [0.0.3] - 2022-01-30
+ 
+### Changed
+
+- [devices/aqueduct/pp/obj.py]
+  Added 'record' argument to 'start' class method.
+- [devices/aqueduct/trcx/obj.py]
+  Added 'record' argument to 'pump' class method.
+
+### Fixed
+- [devices/aqueduct/ph/obj.py]
+  Documentation strings.
+- [devices/aqueduct/ph3/obj.py]
+  Documentation strings.
+
 ## [0.0.2] - 2022-01-06
 
 ### Added
