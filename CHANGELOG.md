@@ -1,6 +1,16 @@
 # Change Log
 All notable changes to the template API are documented here.
 
+## [0.0.4] - 2022-05-08
+ 
+### Added
+- [devices/aqueduct/dls/constants.py]
+  [devices/aqueduct/dls/obj.py]
+  Added DLS Device.
+- [devices/aqueduct/mfm/constants.py]
+  [devices/aqueduct/mfm/obj.py]
+  Added MFM Device.
+
 ## [0.0.3] - 2022-01-30
  
 ### Changed
